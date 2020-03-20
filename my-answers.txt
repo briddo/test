@@ -1,13 +1,21 @@
 Toots follow up questions.
 
 (a) What would you do to improve your submission in general?
+ - Refactor to make it more DRY
+ - Implement some caching and perhaps a DB backend to use MPTT (modified preorder tree traversal)
 (b) How would your code perform with millions of toots? What would you do
 to improve it?
+ - Implement an efficient solution for database storage (probably using the MPTT algorithm stated above)
+ - Make use of an efficient caching solution such as memcached
 (c) Assuming you’ve done that, how would your code perform with deeply
 nested toot threads? What would you do to improve it?
+ - as above (MPTT)
 (d) Assuming you’ve done the above, how would your code perform with
 thousands of requests per second? What would you do to improve it?
+ - HA Proxy or some such round-robin request delegation
 (e) How would you change your code to handle toots changing between requests?
+ - Accept the first request ordered by datetime as the dictator
 (f) Suppose we added tags for toots. How would you implement an endpoint which
 filtered both by author and tag simultaneously? Assume that there are more
 authors than tags.
+ - Have a tags property for each toot object, then filter as appropriate, either with database or memory lookups.
