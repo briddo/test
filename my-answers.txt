@@ -1,0 +1,13 @@
+Toots follow up questions.
+
+(a) What would you do to improve your submission in general?
+(b) How would your code perform with millions of toots? What would you do
+to improve it?
+(c) Assuming you’ve done that, how would your code perform with deeply
+nested toot threads? What would you do to improve it?
+(d) Assuming you’ve done the above, how would your code perform with
+thousands of requests per second? What would you do to improve it?
+(e) How would you change your code to handle toots changing between requests?
+(f) Suppose we added tags for toots. How would you implement an endpoint which
+filtered both by author and tag simultaneously? Assume that there are more
+authors than tags.
